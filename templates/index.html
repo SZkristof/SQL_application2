@@ -10,9 +10,9 @@
             <table id=table>
                 <tr>             
                     {% for row in range(length) %}
-                        <tr>
+                        <tr id=row>
                             {% for column in range(0,row_length) %}
-                            <td> {{ show_table[row][column] }} </td>
+                            <td id=column> {{ show_table[row][column] }} </td>
                             {% endfor %}
                         </tr>
                     {% endfor %}
