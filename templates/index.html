@@ -2,10 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{{ title }}</title>
+        <title> Magic </title>
         <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     </head>
     <body>
-
+        <form>
+            <table id=table>
+                <tr>             
+                    {% for row in range(length) %}
+                        <tr>
+                            {% for column in range(0,row_length) %}
+                            <td> {{ show_table[row][column] }} </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tr>
+        </form>
     </body>
 </html>
