@@ -4,3 +4,11 @@
     vertical-align: middle;
     border: 2px solid black;
 }
+
+#row {
+    border: 1px solid black;
+}
+
+#column {
+    border: 1px solid black;
+}
