@@ -1,0 +1,6 @@
+#table {
+    table-layout: fixed;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 2px solid black;
+}
