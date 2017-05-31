@@ -46,3 +46,22 @@ def modify_database(query):
 
 def show_table():
     return fetch_database("""SELECT * FROM schools;""")
+
+
+def task_1():
+    return fetch_database("""SELECT CONCAT(mentors.first_name,' ',mentors.last_name),
+                          schools.name,schools.country FROM mentors
+                          LEFT JOIN schools ON mentors.city=schools.city""")
+
+
+def task_2():
+    return fetch_database("""SELECT CONCAT(mentors.first_name,' ',mentors.last_name),
+                          schools.name,schools.country FROM mentors
+                          FULL JOIN schools ON mentors.city=schools.city
+                          ORDER BY mentors.id""")
+
+
+def task_3():
+    return fetch_database("""SELECT schools.country,COUNT(mentors.first_name) AS Counts
+                          FROM mentors LEFT JOIN schools ON mentors.city=schools.city
+                          GROUP BY schools.country""")
