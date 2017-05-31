@@ -51,22 +51,31 @@ def show_table():
 def task_1():
     return fetch_database("""SELECT CONCAT(mentors.first_name,' ',mentors.last_name),
                           schools.name,schools.country FROM mentors
-                          LEFT JOIN schools ON mentors.city=schools.city""")
+                          LEFT JOIN schools ON mentors.city=schools.city;""")
 
 
 def task_2():
     return fetch_database("""SELECT CONCAT(mentors.first_name,' ',mentors.last_name),
                           schools.name,schools.country FROM mentors
                           FULL JOIN schools ON mentors.city=schools.city
-                          ORDER BY mentors.id""")
+                          ORDER BY mentors.id;""")
 
 
 def task_3():
     return fetch_database("""SELECT schools.country,COUNT(mentors.first_name) AS Counts
                           FROM mentors LEFT JOIN schools ON mentors.city=schools.city
-                          GROUP BY schools.country""")
+                          GROUP BY schools.country;""")
 
 
 def task_4():
     return fetch_database("""SELECT schools.name,CONCAT(mentors.first_name,' ',mentors.last_name)
-                          FROM mentors JOIN schools ON schools.contact_person=mentors.id""")
+                          FROM mentors JOIN schools ON schools.contact_person=mentors.id;""")
+
+
+def task_5():
+    return fetch_database("""SELECT applicants.first_name,applicants.application_code,
+                          applicants_mentors.creation_date
+                          FROM applicants
+                          LEFT JOIN applicants_mentors ON applicants.id=applicants_mentors.mentor_id
+                          WHERE applicants_mentors.creation_date > '2016-01-01'
+                          ORDER BY applicants_mentors.creation_date DESC;""")
