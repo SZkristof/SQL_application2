@@ -42,3 +42,7 @@ def modify_database(query):
     finally:
         if conn:
             conn.close()
+
+
+def show_table():
+    return fetch_database("""SELECT * FROM schools;""")
