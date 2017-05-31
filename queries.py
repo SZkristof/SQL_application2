@@ -65,3 +65,8 @@ def task_3():
     return fetch_database("""SELECT schools.country,COUNT(mentors.first_name) AS Counts
                           FROM mentors LEFT JOIN schools ON mentors.city=schools.city
                           GROUP BY schools.country""")
+
+
+def task_4():
+    return fetch_database("""SELECT schools.name,CONCAT(mentors.first_name,' ',mentors.last_name)
+                          FROM mentors JOIN schools ON schools.contact_person=mentors.id""")
