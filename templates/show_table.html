@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ page_title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    </head>
+    <body>
+        <form>
+            <table id=table>
+                {% for row in range(3) %}
+                <tr> {{ table_titles[row] }} </tr>
+                {% endfor %}
+                <tr>             
+                    {% for row in range(length) %}
+                        <tr id=row>
+                            {% for column in range(0,row_length) %}
+                            <td id=column> {{ show_table[row][column] }} </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tr>
+        </form>
+    </body>
+</html>
