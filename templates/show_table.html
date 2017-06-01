@@ -8,10 +8,11 @@
     <body>
         <form>
             <table id=table>
-                {% for row in range(3) %}
-                <tr> {{ table_titles[row] }} </tr>
-                {% endfor %}
-                <tr>             
+                
+                <tr>
+                    {% for row in range(3) %}
+                    <th> {{ table_titles[row] }} </th>
+                    {% endfor %}         
                     {% for row in range(length) %}
                         <tr id=row>
                             {% for column in range(0,row_length) %}
