@@ -2,21 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Magic </title>
+        <title>{{ page_title }}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     </head>
     <body>
         <form>
+            <button><a href='/mentors'>Mentors</a></button>
             <table id=table>
-                <tr>             
-                    {% for row in range(length) %}
-                        <tr id=row>
-                            {% for column in range(0,row_length) %}
-                            <td id=column> {{ show_table[row][column] }} </td>
-                            {% endfor %}
-                        </tr>
-                    {% endfor %}
-                </tr>
         </form>
     </body>
 </html>
