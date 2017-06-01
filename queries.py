@@ -79,3 +79,12 @@ def task_5():
                           LEFT JOIN applicants_mentors ON applicants.id=applicants_mentors.mentor_id
                           WHERE applicants_mentors.creation_date > '2016-01-01'
                           ORDER BY applicants_mentors.creation_date DESC;""")
+
+
+def task_6():
+    return fetch_database("""SELECT applicants.application_code,
+                          CONCAT(applicants.first_name,' ',applicants.last_name),
+                          CONCAT(mentors.first_name,' ',mentors.last_name)
+                          FROM applicants
+                          LEFT JOIN applicants_mentors ON applicants.id=applicants_mentors.applicant_id
+                          LEFT JOIN mentors ON mentors.id=applicants_mentors.mentor_id;""")
