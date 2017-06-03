@@ -3,17 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>{{ page_title }}</title>
+        <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
         <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     </head>
     <body>
-        <form>
-            <button><a href='/mentors'>Mentors</a></button>
-            <button><a href='/all-school'>Schools</a></button>
-            <button><a href='/mentors-by-country'>Mentors</a></button>
-            <button><a href='/contacts'>Contacts</a></button>
-            <button><a href='/applicants'>Applicants</a></button>
-            <button><a href='/applicants-and-mentors'>Apps and ments</a></button>
-            <table id=table>
-        </form>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/mentors'>Mentors</a></li>
+            <li><a href='/all-school'>Schools</a></li>
+            <li><a href='/mentors-by-country'>Mentors by country</a></li>
+            <li><a href='/contacts'>Contacts</a></li>
+            <li><a href='/applicants'>Applicants</a></li>
+            <li><a href='/applicants-and-mentors'>Apps and ments</a></li>
+        </ul>
+        <br>
+        <div align="center">
+            <object name="game" width="700" height="500">
+                <param name="movie" value="http://www.darkhorrorgames.com/games/scary-maze-game.swf">
+                <embed src="http://www.darkhorrorgames.com/games/scary-maze-game.swf" width="700" height="500"></embed>
+            </object>
+        </div>
     </body>
 </html>
