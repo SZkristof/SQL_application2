@@ -6,11 +6,19 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
     </head>
     <body>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/mentors'>Mentors</a></li>
+            <li><a href='/all-school'>Schools</a></li>
+            <li><a href='/mentors-by-country'>Mentors by country</a></li>
+            <li><a href='/contacts'>Contacts</a></li>
+            <li><a href='/applicants'>Applicants</a></li>
+            <li><a href='/applicants-and-mentors'>Apps and ments</a></li>
+        </ul>
         <form>
-            <table id=table>
-                
+            <table>           
                 <tr>
-                    {% for row in range(3) %}
+                    {% for row in range(title_length) %}
                     <th> {{ table_titles[row] }} </th>
                     {% endfor %}         
                     {% for row in range(length) %}
