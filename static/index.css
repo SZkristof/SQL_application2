@@ -1,21 +1,46 @@
 body {
-    font-family: 'Lora', 'Times New Roman', serif;
-    font-size: 20px;
+    font-family: 'Lora';
+    font-size: 18px;
     color: #333333;
     background-color: burlywood;
 }
 
-#table {
-    table-layout: fixed;
-    box-sizing: border-box;
-    vertical-align: middle;
-    border: 2px solid black;
+/* MENU BAR */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: firebrick;
 }
 
-#row {
-    border: 1px solid black;
+li {
+    float: left;
 }
 
-#column {
-    border: 1px solid black;
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: darkred;
+}
+
+.active {
+    background-color: darkred;
+}
+/* END MENU BAR */
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+}
+
+tr:hover {
+    color: white;
+    background: brown;
 }
